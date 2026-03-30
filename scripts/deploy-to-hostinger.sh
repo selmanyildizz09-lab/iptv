@@ -45,7 +45,7 @@ cd "$API_DIR"
 npm install --omit=dev
 
 cat > .env <<'EOF'
-DATABASE_URL=mysql://u537684673_vtbuser:j/8fI^iive6Z@localhost:3306/u537684673_vtb
+DATABASE_URL=mysql://u537684673_vtbuser:j%2F8fI%5Eiive6Z@localhost:3306/u537684673_vtb
 JWT_SECRET=CHANGE_THIS_TO_A_LONG_RANDOM_SECRET
 WEB_ORIGIN=https://edaferyazilim.online
 PORT=4000

@@ -36,7 +36,7 @@ fi
 mkdir -p apps/api apps/web
 
 cat > apps/api/.env <<EOF
-DATABASE_URL=mysql://u537684673_vtbuser:j/8fI^iive6Z@localhost:3306/u537684673_vtb
+DATABASE_URL=mysql://u537684673_vtbuser:j%2F8fI%5Eiive6Z@localhost:3306/u537684673_vtb
 JWT_SECRET=${JWT_SECRET_VALUE}
 WEB_ORIGIN=https://edaferyazilim.online
 PORT=4000
