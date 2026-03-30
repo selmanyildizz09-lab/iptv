@@ -1,0 +1,30 @@
+{
+  "name": "iptv-platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:web": "npm run dev -w web",
+    "dev:api": "npm run dev -w api",
+    "build": "npm run build -w api && npm run build -w web",
+    "prisma:generate": "npm run prisma:generate -w api",
+    "prisma:migrate": "npm run prisma:migrate -w api",
+    "prisma:push": "npm run prisma:push -w api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selmanyildizz09-lab/iptv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/selmanyildizz09-lab/iptv/issues"
+  },
+  "homepage": "https://github.com/selmanyildizz09-lab/iptv#readme",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}

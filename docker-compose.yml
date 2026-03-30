@@ -1,0 +1,45 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: iptv-mysql
+    environment:
+      MYSQL_DATABASE: iptv
+      MYSQL_USER: iptv
+      MYSQL_PASSWORD: iptvpass
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  api:
+    image: iptv-api
+    build:
+      context: ./apps/api
+    container_name: iptv-api
+    depends_on:
+      - mysql
+    environment:
+      DATABASE_URL: mysql://iptv:iptvpass@mysql:3306/iptv
+      JWT_SECRET: change-me
+      WEB_ORIGIN: http://localhost:3000
+      PORT: 4000
+      ADMIN_EMAIL: admin@iptv.local
+      ADMIN_PASSWORD: Admin123!
+    ports:
+      - "4000:4000"
+
+  web:
+    image: iptv-web
+    build:
+      context: ./apps/web
+    container_name: iptv-web
+    depends_on:
+      - api
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:4000
+    ports:
+      - "3000:3000"
+
+volumes:
+  mysql_data:

@@ -1,0 +1,9 @@
+Hostinger deploy paketi:
+1) Bu klasoru FTP ile public_html altina yukle.
+2) API icin Node app root: public_html/hostinger/api
+3) WEB icin Node app root: public_html/hostinger/web
+4) API dizininde npm install --omit=dev komutunu calistir.
+5) WEB dizininde npm install --omit=dev komutunu calistir.
+6) API app start command: node dist/index.js
+7) WEB app start command: npm run start
+8) API .env ve WEB .env.local dosyalarini panelden olustur.

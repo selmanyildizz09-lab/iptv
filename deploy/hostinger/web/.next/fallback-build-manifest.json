@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/7QMSspi_YA4_pu_PNKngN/_buildManifest.js",
+    "static/7QMSspi_YA4_pu_PNKngN/_ssgManifest.js",
+    "static/7QMSspi_YA4_pu_PNKngN/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": []
+}
